@@ -1,0 +1,2 @@
+# OrbisCRM Global Python Server Dependencies
+# Uses Python standard library (http.server, sqlite3, json) for zero-overhead startup on Render.
