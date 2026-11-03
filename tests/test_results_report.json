@@ -1,0 +1,200 @@
+[
+  {
+    "test_id": 1,
+    "test_name": "Administrator login",
+    "status": "Passed",
+    "evidence": "Super Admin 'arjun.mehta' verified with Argon2id hash & MFA=1."
+  },
+  {
+    "test_id": 2,
+    "test_name": "User creation",
+    "status": "Passed",
+    "evidence": "Inserted new user; total active users in DB = 10."
+  },
+  {
+    "test_id": 3,
+    "test_name": "Email invitation",
+    "status": "Passed",
+    "evidence": "Invitation token & notification record persisted (Live external SMTP relay marked Not Configured until .env set)."
+  },
+  {
+    "test_id": 4,
+    "test_name": "Forgot password",
+    "status": "Passed",
+    "evidence": "6-digit cryptographic OTP challenge & expiry generator verified."
+  },
+  {
+    "test_id": 5,
+    "test_name": "Password reset",
+    "status": "Passed",
+    "evidence": "Password hash updated and verified in users table."
+  },
+  {
+    "test_id": 6,
+    "test_name": "Role permissions",
+    "status": "Passed",
+    "evidence": "Verified 6 roles; Super Admin has 12/12 permissions, Read-Only has 1/12."
+  },
+  {
+    "test_id": 7,
+    "test_name": "Lead creation",
+    "status": "Passed",
+    "evidence": "Created genuine lead CRM-2026-0101 (ID=101, Class=REAL BUSINESS DATA)."
+  },
+  {
+    "test_id": 8,
+    "test_name": "Lead editing",
+    "status": "Passed",
+    "evidence": "Lead CRM-2026-0101 updated to 'Interested' and audit log recorded."
+  },
+  {
+    "test_id": 9,
+    "test_name": "Lead deletion",
+    "status": "Passed",
+    "evidence": "Temporary lead created, deleted with audit trace, and verified absent."
+  },
+  {
+    "test_id": 10,
+    "test_name": "Incomplete lead retention",
+    "status": "Passed",
+    "evidence": "12 incomplete leads retained on main leads table (min completion 81%)."
+  },
+  {
+    "test_id": 11,
+    "test_name": "Lead ownership",
+    "status": "Passed",
+    "evidence": "100% of leads have non-null owner, assigned salesperson, creator, and modifier."
+  },
+  {
+    "test_id": 12,
+    "test_name": "Lead assignment history",
+    "status": "Passed",
+    "evidence": "201 immutable ownership & assignment history rows verified in activity_logs."
+  },
+  {
+    "test_id": 13,
+    "test_name": "Capacity upgrade",
+    "status": "Passed",
+    "evidence": "Database capacity dynamically upgraded from 100 to 500 in system_settings."
+  },
+  {
+    "test_id": 14,
+    "test_name": "Excel template download",
+    "status": "Passed",
+    "evidence": "All 6 standalone .xlsx templates generated and verified."
+  },
+  {
+    "test_id": 15,
+    "test_name": "Excel import",
+    "status": "Passed",
+    "evidence": "Excel import batch parser, duplicate check, and import_history log verified."
+  },
+  {
+    "test_id": 16,
+    "test_name": "Excel export",
+    "status": "Passed",
+    "evidence": "Master .xlsx export and export_history audit table verified."
+  },
+  {
+    "test_id": 17,
+    "test_name": "Advanced filters",
+    "status": "Passed",
+    "evidence": "Multi-column indexed SQL filter executed cleanly (Germany + Pharma count = 0)."
+  },
+  {
+    "test_id": 18,
+    "test_name": "Duplicate detection",
+    "status": "Passed",
+    "evidence": "2 duplicate candidate pairs flagged for side-by-side manual merge."
+  },
+  {
+    "test_id": 19,
+    "test_name": "Follow-up reminders",
+    "status": "Passed",
+    "evidence": "11 overdue follow-ups automatically flagged and escalated to Sales Manager."
+  },
+  {
+    "test_id": 20,
+    "test_name": "Dashboard calculations",
+    "status": "Passed",
+    "evidence": "Dynamic SQL aggregation: 101 leads, $24,470,000 pipeline, 72.1 avg score."
+  },
+  {
+    "test_id": 21,
+    "test_name": "World map filtering",
+    "status": "Passed",
+    "evidence": "All 101 leads across 22 countries have verified city coordinates."
+  },
+  {
+    "test_id": 22,
+    "test_name": "Company profiles",
+    "status": "Passed",
+    "evidence": "100 Company 360-degree master profiles linked to contacts, leads, and documents."
+  },
+  {
+    "test_id": 23,
+    "test_name": "Sales pipeline",
+    "status": "Passed",
+    "evidence": "Kanban pipeline stages active across 9 distinct lead statuses."
+  },
+  {
+    "test_id": 24,
+    "test_name": "Document uploads",
+    "status": "Passed",
+    "evidence": "25 enterprise documents (PDF, XLSX, DOCX, PNG) stored with role permissions."
+  },
+  {
+    "test_id": 25,
+    "test_name": "Email integration",
+    "status": "Passed",
+    "evidence": "28 lead-associated emails logged (External live SMTP relay: Not Configured until .env set)."
+  },
+  {
+    "test_id": 26,
+    "test_name": "Activity logs",
+    "status": "Passed",
+    "evidence": "201 append-only audit log records verified."
+  },
+  {
+    "test_id": 27,
+    "test_name": "Automatic backups",
+    "status": "Passed",
+    "evidence": "Generated snapshot (508 KB) with SHA-256=1307093580f04840..."
+  },
+  {
+    "test_id": 28,
+    "test_name": "Backup restoration",
+    "status": "Passed",
+    "evidence": "Verified backup restored in isolated sandbox DB with 101/101 records intact."
+  },
+  {
+    "test_id": 29,
+    "test_name": "Demo-data deletion",
+    "status": "Passed",
+    "evidence": "Purged 100 DEMO DATA leads (remaining=0); preserved 1/1 REAL BUSINESS DATA lead."
+  },
+  {
+    "test_id": 30,
+    "test_name": "Data quality checks",
+    "status": "Passed",
+    "evidence": "Identified 12 incomplete profiles, 1 invalid email (CRM-2026-0097), and 1 invalid phone (CRM-2026-0098) without inventing data."
+  },
+  {
+    "test_id": 31,
+    "test_name": "Approval workflows",
+    "status": "Passed",
+    "evidence": "Approval request APR-2026-001 transitioned to Approved and logged."
+  },
+  {
+    "test_id": 32,
+    "test_name": "Mobile responsiveness",
+    "status": "Passed",
+    "evidence": "Responsive Tailwind breakpoints, collapsible sidebar, and fluid containers verified."
+  },
+  {
+    "test_id": 33,
+    "test_name": "Security and access controls",
+    "status": "Passed",
+    "evidence": "Argon2id hashes, parameterized SQL queries, 6-role RBAC checks, and GDPR settings verified."
+  }
+]
